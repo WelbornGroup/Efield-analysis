@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 df = pd.read_csv('big_proj_250.csv')
-file_path = 'big_mol_50_formatted.arc'
+file_path = 'big_mol_5_formatted.arc'
 log_file_path = 'resid.log'
 global global_insert_atom_df
 
@@ -206,7 +206,7 @@ global_insert_atom_df = pd.DataFrame(columns=[header_0, 'atom_type', 'x','y','z'
 
 log_map, residue_map = create_log_map(log_file_path)
 
-output_file = open('big_mol_output_250_frames.arc', 'w')
+output_file = open('big_mol_output_5_frames.arc', 'w')
 data_chunks = split_dataframe(arc_df_full, int(header_0)+2)
 
 for i in range(50):  
